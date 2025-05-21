@@ -9,7 +9,7 @@
  * Copyright (c) 2011 ~ 2017 Shenzhen HXHG. All rights reserved.
  */
 
-#define JPUSH_VERSION_NUMBER 5.6.0
+#define JPUSH_VERSION_NUMBER 5.6.1
 
 #import <Foundation/Foundation.h>
 
@@ -795,6 +795,16 @@ typedef NS_ENUM(NSUInteger, JPAuthorizationStatus) {
  @param control 数据采集配置。
  */
 + (void)setCollectControl:(JPushCollectControl *)control;
+
+/*!
+ * @abstract 设置心跳时间间隔
+ *
+ * @param interval 心跳时间间隔 单位为秒, 取值范围为[30,290]
+ *
+ * @discussion 请在初始化函数之前调用该接口。
+ *
+ */
++ (void)setHeartBeatTimeInterval:(NSInteger)interval;
 
 /*!
  * @abstract 设置SDK地理位置权限开关
