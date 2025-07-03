@@ -9,7 +9,7 @@
  * Copyright (c) 2011 ~ 2017 Shenzhen HXHG. All rights reserved.
  */
 
-#define JPUSH_VERSION_NUMBER 5.6.1
+#define JPUSH_VERSION_NUMBER 5.7.0
 
 #import <Foundation/Foundation.h>
 
@@ -829,6 +829,15 @@ typedef NS_ENUM(NSUInteger, JPAuthorizationStatus) {
  *
  */
 + (void)setSmartPushEnable:(BOOL)isEnable;
+
+/*!
+ * @abstract 设置应用数据洞察扩展功能开关
+ *
+ * @param isEnable YES:开启，NO:关闭，默认是开启。
+ *
+ */
++ (void)setDataInsightsEnable:(BOOL)isEnable;
+
 
 /*!
 * @abstract 设置应用内提醒消息的代理
