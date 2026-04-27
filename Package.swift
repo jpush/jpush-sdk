@@ -46,7 +46,7 @@ let package = Package(
         // 二进制 xcframework 目标
         .binaryTarget(
             name: "JPush",
-            path: "jpush-ios-6.0.0.xcframework"
+            path: "jpush-ios-6.1.0.xcframework"
         )
     ]
 )
