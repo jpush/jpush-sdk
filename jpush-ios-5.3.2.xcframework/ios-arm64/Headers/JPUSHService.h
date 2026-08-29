@@ -9,7 +9,7 @@
  * Copyright (c) 2011 ~ 2017 Shenzhen HXHG. All rights reserved.
  */
 
-#define JPUSH_VERSION_NUMBER 5.5.0
+#define JPUSH_VERSION_NUMBER 5.3.2
 
 #import <Foundation/Foundation.h>
 
@@ -177,12 +177,6 @@ typedef NS_ENUM(NSUInteger, JPAuthorizationStatus) {
 
 @interface JPushCollectControl : NSObject
 
-/* ssid SSID信息。设置为NO,不采集SSID信息。默认为YES。 */
-@property (nonatomic, assign) BOOL ssid;
-/* bssid BSSID信息。设置为NO,不采集BSSID信息。默认为YES。 */
-@property (nonatomic, assign) BOOL bssid;
-/* cell 基站信息。设置为NO,不采集基站信息。默认为YES。*/
-@property (nonatomic, assign) BOOL cell;
 /* gps 经纬度信息。设置为NO,不采集经纬度信息。默认为YES。 */
 @property (nonatomic, assign) BOOL gps;
 
@@ -260,19 +254,6 @@ typedef NS_ENUM(NSUInteger, JPAuthorizationStatus) {
 
 
 + (void)registerDeviceToken:(NSData *)deviceToken;
-
-/*!
- * @abstract 上报liveactivity的启动token
- *
- * @param activityAttributes 某liveActivity定义的属性类型
- * @param pushToStartToken 对应该liveactivity的pushToStartToken，如有更新，请及时调用该方法更新pushToStartToken
- * @param completion 响应回调
- * @param seq  请求序列号
- */
-+ (void)registerLiveActivity:(NSString *)activityAttributes
-            pushToStartToken:(nullable NSData *)pushToStartToken
-                  completion:(nullable JPUSHLiveActivityTokenCompletion)completion
-                        seq:(NSInteger)seq;
 
 /*!
  * @abstract 注册liveActivity并上报其pushToken
@@ -812,13 +793,6 @@ typedef NS_ENUM(NSUInteger, JPAuthorizationStatus) {
  */
 + (void)setPushEnable:(BOOL)isEnable completion:(nullable void (^)(NSInteger iResCode))completion;
 
-/*!
- * @abstract 设置用户分群推送功能开关
- *
- * @param isEnable YES:开启，NO:关闭，默认是开启。
- *
- */
-+ (void)setSmartPushEnable:(BOOL)isEnable;
 
 /*!
 * @abstract 设置应用内提醒消息的代理
