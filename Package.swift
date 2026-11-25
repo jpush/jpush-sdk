@@ -1,33 +1,21 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
+// 客户 UTS 静态 Framework 验证分支，不代表正常公有云版本发布。
 let package = Package(
     name: "JPush",
-    platforms: [
-        .iOS(.v8)
-    ],
-    products: [
-        .library(
-            name: "JPush",
-            targets: ["JPushWrapper"]
-        ),
-    ],
+    platforms: [.iOS(.v8)],
+    products: [.library(name: "JPush", targets: ["JPushWrapper"])],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/jpush/jcore-sdk.git", .branch("customer/uts-static-framework-5.6.0-cec94711"))
     ],
     targets: [
-        // Wrapper target 用于链接系统框架和库
         .target(
             name: "JPushWrapper",
-            dependencies: [
-                "JPush"
-            ],
+            dependencies: ["JPush", .product(name: "JCore", package: "jcore-sdk")],
             path: "JPushWrapper",
+            resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
             linkerSettings: [
-                // System Frameworks
                 .linkedFramework("UIKit"),
                 .linkedFramework("CFNetwork"),
                 .linkedFramework("CoreFoundation"),
@@ -37,17 +25,11 @@ let package = Package(
                 .linkedFramework("Foundation"),
                 .linkedFramework("Security"),
                 .linkedFramework("WebKit"),
-                .linkedFramework("UserNotifications", .when(platforms: [.iOS])),
-                // System Libraries
                 .linkedLibrary("z"),
                 .linkedLibrary("resolv"),
+                .linkedFramework("UserNotifications", .when(platforms: [.iOS]))
             ]
         ),
-        // 二进制 xcframework 目标
-        .binaryTarget(
-            name: "JPush",
-            path: "jpush-ios-6.3.0.xcframework"
-        )
+        .binaryTarget(name: "JPush", path: "Artifacts/JPush.xcframework")
     ]
 )
-

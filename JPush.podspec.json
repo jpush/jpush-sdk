@@ -15,10 +15,10 @@
     "ios": "7.0"
   },
   "source": {
-     "git": "https://github.com/jpush/jpush-sdk.git",
-     "tag": "6.3.0"
-   },
-  "vendored_frameworks": "*.xcframework",
+    "git": "https://github.com/jpush/jpush-sdk.git",
+    "branch": "customer/uts-static-framework-6.3.0-cec94711"
+  },
+  "vendored_frameworks": "Artifacts/JPush.xcframework",
   "frameworks": [
     "UIKit",
     "CFNetwork",
@@ -39,8 +39,13 @@
   ],
   "dependencies": {
     "JCore": [
-      "> 5.5.0"
+      "= 5.6.0"
     ]
   },
-  "static_framework": true
+  "static_framework": true,
+  "resource_bundles": {
+    "JPushPrivacy": [
+      "JPushWrapper/Resources/PrivacyInfo.xcprivacy"
+    ]
+  }
 }
