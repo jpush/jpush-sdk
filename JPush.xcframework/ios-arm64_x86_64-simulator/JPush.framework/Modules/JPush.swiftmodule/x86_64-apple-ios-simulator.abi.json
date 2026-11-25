@@ -1,0 +1,132 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "JPush",
+    "printedName": "JPush",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JPush"
+      },
+      {
+        "kind": "Import",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
+        "declKind": "Import",
+        "moduleName": "JPush"
+      },
+      {
+        "kind": "Function",
+        "name": "jpushLiveActivityStateProviderStart",
+        "printedName": "jpushLiveActivityStateProviderStart()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)jpushLiveActivityStateProviderStart",
+        "mangledName": "$s5JPush35jpushLiveActivityStateProviderStartyyF",
+        "moduleName": "JPush",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "jpushLiveActivityStateProviderRequestSnapshot",
+        "printedName": "jpushLiveActivityStateProviderRequestSnapshot()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)jpushLiveActivityStateProviderRequestSnapshot",
+        "mangledName": "$s5JPush45jpushLiveActivityStateProviderRequestSnapshotyyF",
+        "moduleName": "JPush",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "jpushLiveActivityStateProviderRefreshSnapshot",
+        "printedName": "jpushLiveActivityStateProviderRefreshSnapshot()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)jpushLiveActivityStateProviderRefreshSnapshot",
+        "mangledName": "$s5JPush45jpushLiveActivityStateProviderRefreshSnapshotyyF",
+        "moduleName": "JPush",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "jpushLiveActivityStateProviderCurrentStatus",
+        "printedName": "jpushLiveActivityStateProviderCurrentStatus()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Int32",
+            "printedName": "Swift.Int32",
+            "usr": "s:s5Int32V"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)jpushLiveActivityStateProviderCurrentStatus",
+        "mangledName": "$s5JPush43jpushLiveActivityStateProviderCurrentStatuss5Int32VyF",
+        "moduleName": "JPush",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 125,
+      "length": 37,
+      "value": "\"kJPushLiveActivityStateNotification\""
+    },
+    {
+      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 195,
+      "length": 62,
+      "value": "\"\/System\/Library\/Frameworks\/ActivityKit.framework\/ActivityKit\""
+    },
+    {
+      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1256,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

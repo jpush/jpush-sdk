@@ -1,0 +1,32 @@
+{
+  "product": "JPush",
+  "version": "6.3.1",
+  "producer": "local-original-entrypoint",
+  "source_sha": "32653517b094b47d708c385115a6a764e4457c64",
+  "zip_sha256": "46594970c94aae630c9cd49cdda0c0f870f3d040f585d9852f195bc753fd071c",
+  "archive_mapping": [
+    {
+      "slice": "ios-arm64_x86_64-simulator",
+      "sha256": "0b9190dffc8ebb958caf8f7dc9d08ca16172051dc7f2338d905094b101232805"
+    },
+    {
+      "slice": "ios-arm64",
+      "sha256": "0726bae54e3dc4afb3ba22ebc16df08d0ea03c5eb7a4a5158f9c09135b06576a"
+    }
+  ],
+  "distribution_kind": "isolated-customer-uts-validation",
+  "package_type": "normal",
+  "source_branch": "integration/uts-static-framework-6.3.0-cec94711",
+  "initial_checkout_clean": true,
+  "source_dirty_during_build": true,
+  "build_configuration": "release",
+  "build_number": 501,
+  "xcode": "26.3",
+  "sdk": "26.2",
+  "build_preparation": "Original entrypoint updates BuildID/release flags; source versions unchanged",
+  "jcore_dependency": {
+    "repository": "https://github.com/jpush/jcore-sdk.git",
+    "branch": "customer/uts-static-framework-5.6.1-cec94711",
+    "version": "5.6.1"
+  }
+}

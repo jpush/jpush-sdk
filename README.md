@@ -1,11 +1,19 @@
-# JPush UTS 静态 Framework 验证分支
+# JPush 6.3.1 客户 UTS 验证分支
 
-此分支基于普通公有云SDK 6.3.0，仅改变XCFramework容器为静态.framework。不是正常版本发布；normal/noidfa/JBasic没有混用，SDK archive未重编。模块名保持JPush。原archive到Framework同名binary的SHA映射见Artifacts/JPush.provenance.json。
+此分支为 normal iOS SDK 的隔离验证分发，未发布正常公有云渠道或版本 Tag。SDK 已从合并后的精确源码重新编译，通过原 packageFramework.sh release 调用链构建。
 
-在Xcode添加仓库 `https://github.com/jpush/jpush-sdk.git`，选择branch `customer/uts-static-framework-6.3.0-cec94711`，添加JPush product。JPush的依赖指向独立JCore验证分支；同时集成时不要再引入正常JCore Pod/旧.a，避免重复链接。App按原SDK要求设置`-ObjC`；SPM包装目标负责资源bundle和已有系统链接项。
+- SDK 版本：6.3.1；源码 Revision：`32653517b094b47d708c385115a6a764e4457c64`。
+- 构建来源：本地 Xcode 26.3 / iOS SDK 26.2，原入口 release，BuildID 501。Jenkins 旧 locale 适配契约与新源码不匹配，未冒称 Jenkins 成功。
+- 根目录直接为 `JPush.xcframework`；两片均为静态 `JPush.framework`，module map 位于 `Modules/module.modulemap`，不含 Headers 根 map。
+- `JPushWrapper` 只承担 SPM 系统库链接、依赖传递和隐私资源 bundle；SDK 导入名仍为 `JPush`。
+- `PROVENANCE.json` 与 XCFramework 内的 RepackProvenance.json 记录来源和封装前后 archive SHA-256。JCore normal archive 在合并 JCommon 后才封装。
 
-设备和模拟器每片包含JPush.framework，Modules/module.modulemap，公开Headers、Info.plist、PrivacyInfo.xcprivacy；无Headers根module map。框架为静态库，不应手工Embed & Sign。Pods仅使用此分支local/git显式来源，两组件须同时覆盖到对应验证分支；不发布该podspec到Trunk。
+## SPM
 
-UTS客户验证：删除既有重复本地SDK依赖并清理缓存；将此隔离SPM组合接入UTS生成iOS工程；执行Swift `import JPush` / `import JCore`、完整clean build（模拟器/真机）、初始化与通知回调验证。请保存Xcode及UTS版本、精确两个commit、目标架构、构建日志和真机结果。UTS工具链/工程未在本仓提供，不能把原生App通过当作UTS通过。权限/AppKey由客户运行时提供，不写入本分支。
+在 Xcode 添加 `https://github.com/jpush/jpush-sdk.git`，选择分支 `customer/uts-static-framework-6.3.1-cec94711`，使用 `JPush` 产品。
 
-回退：恢复原始6.3.0/5.6.0普通包锁定依赖并删除本组合；原tag/main未修改。
+JPush 自动依赖 JCore 的 `customer/uts-static-framework-5.6.1-cec94711` 分支。不要同时引入正常渠道、no-IDFA 或 JBasic 的其它 JCore 产品。Swift 可直接 `import JPush`、`import JCore`；Objective-C 仍可 `#import <JPush/JPUSHService.h>`、`#import <JCore/JGCOREAPI.h>`。
+
+## 客户验收
+
+请在实际 UTS 插件中替换 SDK、清理构建缓存后验证 Swift/ObjC 导入、初始化及所需功能。客户 UTS 工程未提供，UTS 构建/运行仍待验收；此分支不代表完成 UTS 或真机运行测试。

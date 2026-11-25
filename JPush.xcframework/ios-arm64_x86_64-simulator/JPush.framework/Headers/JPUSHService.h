@@ -9,7 +9,7 @@
  * Copyright (c) 2011 ~ 2017 Shenzhen HXHG. All rights reserved.
  */
 
-#define JPUSH_VERSION_NUMBER 6.3.0
+#define JPUSH_VERSION_NUMBER 6.3.1
 
 #import <Foundation/Foundation.h>
 

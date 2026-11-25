@@ -1,6 +1,6 @@
 {
   "name": "JPush",
-  "version": "6.3.0",
+  "version": "6.3.1",
   "summary": "Offically supported JPush iOS SDK Pod. 官方支持的极光推送SDK. ",
   "description": "Offically supported JPush iOS SDK Pod. 官方支持的极光推送SDK. \n集成详情请访问官方文档网站：http://docs.jiguang.cn ",
   "homepage": "http://www.jiguang.cn/",
@@ -16,9 +16,9 @@
   },
   "source": {
     "git": "https://github.com/jpush/jpush-sdk.git",
-    "branch": "customer/uts-static-framework-6.3.0-cec94711"
+    "branch": "customer/uts-static-framework-6.3.1-cec94711"
   },
-  "vendored_frameworks": "Artifacts/JPush.xcframework",
+  "vendored_frameworks": "JPush.xcframework",
   "frameworks": [
     "UIKit",
     "CFNetwork",
@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "JCore": [
-      "= 5.6.0"
+      "= 5.6.1"
     ]
   },
   "static_framework": true,
