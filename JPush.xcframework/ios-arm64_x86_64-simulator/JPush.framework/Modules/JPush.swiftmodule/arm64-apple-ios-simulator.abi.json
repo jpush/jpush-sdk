@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "JPush",
-    "printedName": "JPush",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
     "children": [
       {
         "kind": "Import",
@@ -108,21 +108,21 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "filePath": "\/Users\/jiguang\/Jenkins\/cloud-agent\/workspace\/sdk-build\/ios-sdk-build\/ios-core-push-dev\/source\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
       "kind": "StringLiteral",
       "offset": 125,
       "length": 37,
       "value": "\"kJPushLiveActivityStateNotification\""
     },
     {
-      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "filePath": "\/Users\/jiguang\/Jenkins\/cloud-agent\/workspace\/sdk-build\/ios-sdk-build\/ios-core-push-dev\/source\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
       "kind": "StringLiteral",
       "offset": 195,
       "length": 62,
       "value": "\"\/System\/Library\/Frameworks\/ActivityKit.framework\/ActivityKit\""
     },
     {
-      "filePath": "\/Users\/recharlee\/workspace\/agent-habitat\/workspaces\/beaver\/tasks\/2026\/11\/23\/task-beaver-20261123-cec94711\/entrypoint-release\/final-build\/ios-core-push-dev\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
+      "filePath": "\/Users\/jiguang\/Jenkins\/cloud-agent\/workspace\/sdk-build\/ios-sdk-build\/ios-core-push-dev\/source\/ios-jpush\/JPush\/JPush\/Controller\/JPushLiveActivityStateProvider.swift",
       "kind": "BooleanLiteral",
       "offset": 1256,
       "length": 5,
