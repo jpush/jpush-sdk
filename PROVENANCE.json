@@ -2,11 +2,11 @@
   "product": "JPush",
   "version": "6.3.1",
   "producer": "jenkins",
-  "source_sha": "421158e3319678a322f939191b4f9c3e88defb3e",
+  "source_sha": "f963d29a151f039f1de738dceef5ff5454c83c90",
   "source_branch": "integration/uts-static-framework-6.3.0-cec94711",
-  "jenkins_build_url": "https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/459/",
-  "jenkins_build_number": 459,
-  "pipeline_commit": "6a4c500923c733d038818eff6bd4cfec29c6bb27",
+  "jenkins_build_url": "https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/460/",
+  "jenkins_build_number": 460,
+  "pipeline_commit": "2dd88c0f7c89339777b39276041113d31615b284",
   "dependency_commits": [
     {
       "path": "ios-reconsitution",
@@ -27,7 +27,7 @@
     {
       "path": "ios-core-push-extension-dev",
       "jobName": "ios-core-push-extension-dev",
-      "commit": "421158e3319678a322f939191b4f9c3e88defb3e",
+      "commit": "f963d29a151f039f1de738dceef5ff5454c83c90",
       "branch": "integration/uts-static-framework-6.3.0-cec94711",
       "sdk": {
         "name": "jpush-extension",
@@ -36,33 +36,34 @@
       }
     }
   ],
-  "sdk_zip_sha256": "548f476a55979b87534eeb0eaf9ef56faaf9e6b46395c3e08f517497a5fed105",
-  "outer_artifact_sha256": "9e93934fae913abfd1ee197239f0b53fef86a40c93cd0a89f005f6018efb93a7",
-  "archive_mapping": [
-    {
-      "slice": "ios-arm64_x86_64-simulator",
-      "sha256": "1e5f53bc02c5871447abe2feb2c6dfea9cfe5c03a0fee7080c30a355a39143d1",
-      "static_archive": true
-    },
-    {
-      "slice": "ios-arm64",
-      "sha256": "25790150a03fab4105026cd652178a0b03dced691069148d78697738c835e4e1",
-      "static_archive": true
-    }
-  ],
-  "clean_diagnostic_count": 30,
+  "outer_artifact_sha256": "d0ac66abde8c38ff518503e1f4c2af580998b0be97f1d9e70b5d623e0140e79d",
   "actual_build_succeeded_count": 48,
-  "source_dirty_during_build": true,
-  "consumer_build_executed_locally": false,
+  "known_clean_diagnostic_count": 30,
+  "consumer_build_executed": false,
   "distribution_kind": "isolated-customer-uts-validation",
   "package_type": "normal",
-  "sdk_build_environment": "existing Jenkins Xcode14.2 / Swift5.7.2 / Python3.9.6",
-  "consumer_validation": "Not executed for this Jenkins product; no local consumer build used",
+  "sdk_zip_sha256": "c35d6a2d3b43560dcfe8b109e3ccb62a96cae5e8855af56e3e6278ad8e225ee3",
+  "archive_mapping": [
+    {
+      "slice": "ios-arm64",
+      "sha256": "1922ee90f5c517c2e0cc0e1a2314d754c828187d1997c3963718baed8668aeb5",
+      "static_archive": true,
+      "runtime_encoding_present": true,
+      "privacy_sha256": "c1ae5a7b3323ebdeabecc0927b12916dfb3a25ab5096d28025c30643d209bbbc"
+    },
+    {
+      "slice": "ios-arm64_x86_64-simulator",
+      "sha256": "da48908a3b8551737abf00778e5aeb7359ca8a9b1ed07cf366f392bda723e697",
+      "static_archive": true,
+      "runtime_encoding_present": true,
+      "privacy_sha256": "c1ae5a7b3323ebdeabecc0927b12916dfb3a25ab5096d28025c30643d209bbbc"
+    }
+  ],
+  "all_sku_validation": "Jenkins SDK ZIP static verification; not consumer/UTS runtime",
+  "consumer_validation": "Not executed; no local SDK or consumer build used",
   "uts_validation": "pending customer",
   "environment_configuration_changed": false,
-  "jcore_dependency": {
-    "repository": "https://github.com/jpush/jcore-sdk.git",
-    "branch": "customer/uts-static-framework-5.6.1-jenkins-cec94711",
-    "version": "5.6.1"
-  }
+  "source_dirty_during_build": true,
+  "spm_jcore_dependency": "none; integration owner must separately link a compatible JCore",
+  "podspec_jcore_requirement": "> 5.5.0"
 }

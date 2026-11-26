@@ -9,18 +9,18 @@
   ],
   "source_kind": "fresh-sdk-build",
   "compiled_archive_sha256": {
-    "ios-arm64": "25790150a03fab4105026cd652178a0b03dced691069148d78697738c835e4e1",
-    "ios-arm64_x86_64-simulator": "1e5f53bc02c5871447abe2feb2c6dfea9cfe5c03a0fee7080c30a355a39143d1"
+    "ios-arm64": "1922ee90f5c517c2e0cc0e1a2314d754c828187d1997c3963718baed8668aeb5",
+    "ios-arm64_x86_64-simulator": "da48908a3b8551737abf00778e5aeb7359ca8a9b1ed07cf366f392bda723e697"
   },
-  "sdk_source_revision": "421158e3319678a322f939191b4f9c3e88defb3e",
+  "sdk_source_revision": "f963d29a151f039f1de738dceef5ff5454c83c90",
   "source_dirty_during_build": true,
   "distribution_configuration": "release",
-  "build_url": "https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/459/",
-  "build_number": "459",
+  "build_url": "https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/460/",
+  "build_number": "460",
   "files": {
     "Info.plist": "13696cbd18c8aa61c7e88edd53642af75e9884a46d5ce1c2392ee566661b73c7",
     "ios-arm64_x86_64-simulator/PrivacyInfo.xcprivacy": "c1ae5a7b3323ebdeabecc0927b12916dfb3a25ab5096d28025c30643d209bbbc",
-    "ios-arm64_x86_64-simulator/libJPush.a": "1e5f53bc02c5871447abe2feb2c6dfea9cfe5c03a0fee7080c30a355a39143d1",
+    "ios-arm64_x86_64-simulator/libJPush.a": "da48908a3b8551737abf00778e5aeb7359ca8a9b1ed07cf366f392bda723e697",
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/x86_64-apple-ios-simulator.swiftinterface": "61471ada7d6d2d3cf5a9bb66429d29a1cbd814ff28041750a07a563c22e052ae",
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/arm64-apple-ios-simulator.abi.json": "073e70889c5d518d7310e7761d44fe0fc7e29f8b77667f5ac373c1bca61da563",
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface": "94625d524765a97f19b7c16cacad61b27e88f2bde93fd963e46212deb61cf960",
@@ -31,34 +31,34 @@
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface": "61471ada7d6d2d3cf5a9bb66429d29a1cbd814ff28041750a07a563c22e052ae",
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/arm64-apple-ios-simulator.swiftdoc": "15ab9b70e4d9f91af621d30704846b4134a9a6752e7ebdef4f479aa09eb27f53",
     "ios-arm64_x86_64-simulator/JPush.swiftmodule/x86_64-apple-ios-simulator.abi.json": "073e70889c5d518d7310e7761d44fe0fc7e29f8b77667f5ac373c1bca61da563",
-    "ios-arm64_x86_64-simulator/JPush.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo": "3979f55f2f5ffb30893f641167dc98495bdf54d6ead6f4c280c1c3cef874189e",
-    "ios-arm64_x86_64-simulator/JPush.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo": "2e350d53c04b8e39a5199e7dbe18f4744e7e9ddf939f8a175c4afab585b21944",
+    "ios-arm64_x86_64-simulator/JPush.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo": "e82c107671b4bcffa5c7132e1e73b20c8f6eba6889b16ec13547e93f26785824",
+    "ios-arm64_x86_64-simulator/JPush.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo": "aa0fa86a8b8164ec79a093dfb3e5bc4d324c410258f5e260ef44dcbdf67791a2",
     "ios-arm64_x86_64-simulator/Headers/JPUSHService.h": "92fbe8b7046c511839d24c479ccab20084a21805f78c129e57c6aa635aed3938",
     "ios-arm64/PrivacyInfo.xcprivacy": "c1ae5a7b3323ebdeabecc0927b12916dfb3a25ab5096d28025c30643d209bbbc",
-    "ios-arm64/libJPush.a": "25790150a03fab4105026cd652178a0b03dced691069148d78697738c835e4e1",
+    "ios-arm64/libJPush.a": "1922ee90f5c517c2e0cc0e1a2314d754c828187d1997c3963718baed8668aeb5",
     "ios-arm64/JPush.swiftmodule/arm64-apple-ios.swiftinterface": "53ed39adf6741046c83ee059f529e9555aec5f73979d044f1ff1a7e03d79707b",
     "ios-arm64/JPush.swiftmodule/arm64-apple-ios.swiftdoc": "f170cf24e4f090188121e44a70e3ed1f9734f7c8079d9fd889b16b14bb7e4684",
     "ios-arm64/JPush.swiftmodule/arm64-apple-ios.swiftmodule": "ce0c73b3238e0b8fddbc7754034b142d27ac4c68b830ea44a37e463d18d4eb3d",
     "ios-arm64/JPush.swiftmodule/arm64-apple-ios.abi.json": "073e70889c5d518d7310e7761d44fe0fc7e29f8b77667f5ac373c1bca61da563",
     "ios-arm64/JPush.swiftmodule/arm64-apple-ios.private.swiftinterface": "53ed39adf6741046c83ee059f529e9555aec5f73979d044f1ff1a7e03d79707b",
-    "ios-arm64/JPush.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo": "04037555804444e5d0a8de6e9012982866279d3e128f13d93d992d79ddbc9183",
+    "ios-arm64/JPush.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo": "cc8d9a12c211cb93291327961cbba5a2ba40c9c8490bec819da6febd158d4dd4",
     "ios-arm64/Headers/JPUSHService.h": "92fbe8b7046c511839d24c479ccab20084a21805f78c129e57c6aa635aed3938"
   },
   "operation": "static-framework-repack-no-sdk-compilation",
   "archive_mapping": [
     {
-      "slice": "ios-arm64_x86_64-simulator",
-      "input_archive": "libJPush.a",
-      "framework_binary": "JPush.framework/JPush",
-      "sha256_before": "1e5f53bc02c5871447abe2feb2c6dfea9cfe5c03a0fee7080c30a355a39143d1",
-      "sha256_after": "1e5f53bc02c5871447abe2feb2c6dfea9cfe5c03a0fee7080c30a355a39143d1"
-    },
-    {
       "slice": "ios-arm64",
       "input_archive": "libJPush.a",
       "framework_binary": "JPush.framework/JPush",
-      "sha256_before": "25790150a03fab4105026cd652178a0b03dced691069148d78697738c835e4e1",
-      "sha256_after": "25790150a03fab4105026cd652178a0b03dced691069148d78697738c835e4e1"
+      "sha256_before": "1922ee90f5c517c2e0cc0e1a2314d754c828187d1997c3963718baed8668aeb5",
+      "sha256_after": "1922ee90f5c517c2e0cc0e1a2314d754c828187d1997c3963718baed8668aeb5"
+    },
+    {
+      "slice": "ios-arm64_x86_64-simulator",
+      "input_archive": "libJPush.a",
+      "framework_binary": "JPush.framework/JPush",
+      "sha256_before": "da48908a3b8551737abf00778e5aeb7359ca8a9b1ed07cf366f392bda723e697",
+      "sha256_after": "da48908a3b8551737abf00778e5aeb7359ca8a9b1ed07cf366f392bda723e697"
     }
   ]
 }

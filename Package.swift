@@ -6,13 +6,10 @@ let package = Package(
     name: "JPush",
     platforms: [.iOS(.v8)],
     products: [.library(name: "JPush", targets: ["JPushWrapper"])],
-    dependencies: [
-        .package(url: "https://github.com/jpush/jcore-sdk.git", .branch("customer/uts-static-framework-5.6.1-jenkins-cec94711"))
-    ],
     targets: [
         .target(
             name: "JPushWrapper",
-            dependencies: ["JPush", .product(name: "JCore", package: "jcore-sdk")],
+            dependencies: ["JPush"],
             path: "JPushWrapper",
             resources: [.copy("Resources/PrivacyInfo.xcprivacy")],
             linkerSettings: [

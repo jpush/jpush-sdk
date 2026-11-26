@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "JCore": [
-      "= 5.6.1"
+      "> 5.5.0"
     ]
   },
   "static_framework": true,

@@ -1,21 +1,28 @@
 # JPush 6.3.1 Jenkins客户验证分支
 
-此分支只使用原Jenkins环境实际构建的normal SDK，未正式发布渠道或Tag。
+本分支仅normal静态Framework，来自既有Jenkins原入口真实编译，不代表正常渠道发行或Tag。
 
-- producer：Jenkins；构建：[#459](https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/459/)。
-- SDK源码：`421158e3319678a322f939191b4f9c3e88defb3e`；controls：`6a4c500923c733d038818eff6bd4cfec29c6bb27`。
-- 既有工具链：Xcode14.2 / Swift5.7.2 / Python3.9.6。未调整Job、pipeline、节点或全局环境配置，未使用local替代SDK包。
-- 原SDK ZIP SHA-256：`548f476a55979b87534eeb0eaf9ef56faaf9e6b46395c3e08f517497a5fed105`。
-- 根目录直接`JPush.xcframework`，两片均静态Framework，map位于Modules/module.modulemap。
-- `JPushWrapper`仅传递系统库/依赖与隐私bundle；实际SDK模块名仍`JPush`。JCore normal在JCommon最终合并后封装，原archive与Framework字节SHA一致。
+- Jenkins：https://jenkins.qa.jpushoa.com/job/sdk-build/job/ios-sdk-build/job/ios-core-push-dev/460/；源码：`f963d29a151f039f1de738dceef5ff5454c83c90`。
+- 实际controls：`2dd88c0f7c89339777b39276041113d31615b284`；原release ZIP SHA：`c35d6a2d3b43560dcfe8b109e3ccb62a96cae5e8855af56e3e6278ad8e225ee3`。
+- 根直接`JPush.xcframework`，两片为静态archive，Modules/module.modulemap；保留真实Swift接口（如有）及隐私资源。
+- `JPushWrapper`提供系统库链接和SPM隐私resource，不能因为取消Core绑定而删除。
+- 本轮原SDK ZIP已统一JPush normal/noidfa、JCore normal/noidfa/pure，debug/release与真机/模拟器分别核验。JCore各SKU先合并对应JCommon，再封装；pure外层仍jbasic，实际模块JCore。此GitHub分支只复制normal，不混入其他SKU。
+- Extension本轮未改，保持原ZIP中的raw archive布局，不新增SPM Extension产品。
 
-## 集成
+## SPM集成
 
-Xcode添加`https://github.com/jpush/jpush-sdk.git`，选择分支`customer/uts-static-framework-6.3.1-jenkins-cec94711`，使用JPush产品。
-JPush依赖配套JCore的`customer/uts-static-framework-5.6.1-jenkins-cec94711`分支；不要混用旧local、正常渠道或JBasic/其它包型。
+分别添加`https://github.com/jpush/jpush-sdk.git`的`customer/uts-static-framework-6.3.1-jenkins-cec94711`和`https://github.com/jpush/jcore-sdk.git`的`customer/uts-static-framework-5.6.1-jenkins-cec94711`，把需要的JPush、JCore产品加到实际App target。
+
+JPush Package.swift不声明Core package/product依赖，不锁Core版本、分支或commit。集成方须独立选择并最终链接兼容的JCore；取消包管理绑定不代表JPush可脱离Core运行，也不保证任意Core版本兼容。不同时链接normal/noidfa/pure以免重复符号。
+
+## CocoaPods集成
+
+客户JPush podspec的Core约束为`> 5.5.0`，没有固定到5.6.1。验证本批制品时，请在Podfile中显式把JPush/JCore指向各自上述客户Git分支，避免自动解析到其他渠道Core；具体兼容选择仍由集成方验收。此变更未发布到标准Specs渠道。
 
 ## 验证边界
 
-Jenkins原SDK构建和产物来源、版本、静态格式、封装哈希已核；本批Jenkins产物的完整consumer App/SPM构建、归档与UTS运行尚未验证，未以旧local产物的测试结果代替。SDK源码最低配置不等于最低系统实机运行证明。请在客户实际UTS工程验收；不要将本验证分支当正式发行。
+仅现有Jenkins构建SDK，未调整Job/pipeline/节点/Xcode/global locale/账号权限，不使用local替代产物。原ZIP主SHA、版本/runtime编码、SKU/隐私、静态magic及封装前后archive SHA已核。源码构建期间正常adapter/BuildID/开关修改使dirty=true，不能说全过程clean。
 
-来源详见PROVENANCE.json及XCFramework内RepackProvenance.json。旧local分支保留历史，不作为本分支制品来源。
+本批完整consumer SPM/Pods clean build、App归档隐私resource、签名真机与UTS未执行；原Job没有消费端阶段。没有以旧local或旧normal制品测试结果代替。最低系统配置不等于最低系统运行证明。客户需用实际工程验收。
+
+来源详见PROVENANCE.json及XCF内RepackProvenance.json。历史local和上一轮Jenkins提交保留，不篡改producer。
