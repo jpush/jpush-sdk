@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/jpush/jpush-sdk.git",
-    "branch": "customer/uts-static-framework-6.3.1-jenkins-cec94711"
+    "branch": "customer/uts-static-framework-6.3.1"
   },
   "vendored_frameworks": "JPush.xcframework",
   "frameworks": [
